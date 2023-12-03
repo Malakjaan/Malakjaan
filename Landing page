@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is My Landing Page</title>
+    <style>
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+        }body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        article {
+            flex: 1;
+            margin: 1rem;
+            padding: 1.5rem;
+            border: 1px solid blue;
+            border-radius: 8px;
+            background-color: grey;
+        }
+        header, footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Landing Page</h1>
+        <p>Welcome to my awe7m website!</p>
+    </header>
+
+    <section>
+        <article>
+            <h2>this is Column 1st</h2>
+            <p>This is some content for column 1st.</p>
+        </article>
+
+        <article>
+            <h2>this is Column 2nd</h2>
+            <p>This is some content for column 2nd.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; this is footer section</footer></p>
+    </footer>
+</body>
+
+</html>
