@@ -4,50 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Application</title>
+    <title>this is Quiz Application</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family:'Courier New', Courier, monospace, Impact,'Arial Narrow Bold', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            background-color: #f0f0f0;
+            box-sizing:content-box;
+            background-color: black;
         }
 
         #quiz-container {
-            max-width: 600px;
+            max-width: 400px;
             margin: 50px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #question-container {
-            margin-bottom: 20px;
+            background-color: red;
+            box-shadow: 0 0 10px rgba(42, 3, 3, 0.1);
+            border-radius: 12px;
+            padding: 40px;
         }
 
         #options-container {
-            display: grid;
-            gap: 10px;
+            display:flexbox;
+            gap: 30px;
+        }
+
+        #question-container {
+            margin-bottom: 30px;
         }
 
         .option {
             padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid white;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 50px;
         }
 
         .option:hover {
             background-color: #f5f5f5;
         }
 
-        #result {
-            font-weight: bold;
-            margin-top: 20px;
-        }
     </style>
 </head>
 
@@ -62,16 +62,15 @@
     <script>
         const quizData = [
             {
-                question: "What is the capital of France?",
-                options: ["Paris", "Berlin", "London", "Madrid"],
-                correctAnswer: "Paris"
+                question: "In the compiler keyword of a language are recognized during?",
+                options: ["Parsing of the program", "The code generation", "The lexical analysis of the program", "Dataflow analysis"],
+                correctAnswer: "The lexical analysis of the program"
             },
             {
-                question: "Which planet is known as the Red Planet?",
-                options: ["Earth", "Mars", "Venus", "Jupiter"],
-                correctAnswer: "Mars"
+                question: "The output of lexical analyzer is?",
+                options: ["A parse tree", "Intermediate code", "Machine code", "A stream of tokens"],
+                correctAnswer: "A stream of tokens"
             },
-            // Add more quiz questions here
         ];
 
         let currentQuestion = 0;
