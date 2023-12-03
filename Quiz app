@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+
+        #quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #question-container {
+            margin-bottom: 20px;
+        }
+
+        #options-container {
+            display: grid;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #f5f5f5;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quiz-container">
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                question: "What is the capital of France?",
+                options: ["Paris", "Berlin", "London", "Madrid"],
+                correctAnswer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Earth", "Mars", "Venus", "Jupiter"],
+                correctAnswer: "Mars"
+            },
+            // Add more quiz questions here
+        ];
+
+        let currentQuestion = 0;
+        let userScore = 0;
+
+        function loadQuestion() {
+            const questionContainer = document.getElementById("question-container");
+            const optionsContainer = document.getElementById("options-container");
+            const resultContainer = document.getElementById("result");
+
+            questionContainer.textContent = quizData[currentQuestion].question;
+            optionsContainer.innerHTML = "";
+
+            quizData[currentQuestion].options.forEach((option, index) => {
+                const optionElement = document.createElement("div");
+                optionElement.className = "option";
+                optionElement.textContent = option;
+                optionElement.onclick = () => selectOption(index);
+                optionsContainer.appendChild(optionElement);
+            });
+
+            resultContainer.textContent = "";
+        }
+
+        function selectOption(selectedIndex) {
+            const selectedOption = quizData[currentQuestion].options[selectedIndex];
+            const correctAnswer = quizData[currentQuestion].correctAnswer;
+
+            if (selectedOption === correctAnswer) {
+                userScore++;
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const resultContainer = document.getElementById("result");
+            resultContainer.textContent = `Your Score: ${userScore} out of ${quizData.length}`;
+        }
+
+        function checkAnswer() {
+            const options = document.getElementsByClassName("option");
+            const selectedOptionIndex = Array.from(options).findIndex(option => option.classList.contains("selected"));
+
+            if (selectedOptionIndex !== -1) {
+                selectOption(selectedOptionIndex);
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+
+</html>
