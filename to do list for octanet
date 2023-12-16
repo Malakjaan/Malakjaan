@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant To-Do List</title>
+    
+    <body background="C:\Users\User\Desktop\w.jpg" width="100%"background-repeat: no-repeat;></body>
+          
+       
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #todo-container {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        #header {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+        }
+
+        #task-input {
+            width: 70%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid black;
+            outline: none;
+            font-size: 16px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        #add-btn {
+            background-color: black;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #add-btn:hover {
+            background-color: gold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 15px;
+            border-bottom: 1px solid #ecf0f1;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:hover {
+            background-color: #ecf0f1;
+        }
+
+        .delete-btn {
+            background-color: #ec2009;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<div id="todo-container">
+    <div id="header">
+        <h2>To-Do List</h2>
+    </div>
+    <input type="text" id="task-input" placeholder="Add a new task">
+    <button id="add-btn" onclick="addTask()">Add Task</button>
+    <ul id="task-list"></ul>
+</div>
+
+<script>
+    function addTask() {
+        var taskInput = document.getElementById("task-input");
+        var taskList = document.getElementById("task-list");
+
+        if (taskInput.value.trim() !== "") {
+            var newTask = document.createElement("li");
+            newTask.innerHTML = `
+                ${taskInput.value}
+                <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+            `;
+            taskList.appendChild(newTask);
+            taskInput.value = "";
+        }
+    }
+
+    function deleteTask(element) {
+        var taskList = document.getElementById("task-list");
+        var taskItem = element.parentNode;
+        taskList.removeChild(taskItem);
+    }
+</script>
+
+</body>
+</html>
