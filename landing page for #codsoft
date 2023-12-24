@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travels</title>
+    <link rel="stylesheet"href="C:\Users\User\Documents\vs code\practice.css" />
+</head>
+<body background="C:\Users\User\Desktop\m4.jpeg" width="100%"></body>
+<body>
+    <header>
+    <div class="logo"><a href="#">GlamiFied</a></div>
+        <h1><marquee>Beneath the makeup and behind the smile I am just a girl who wishes for the world</marquee></h1>
+    <nav>
+        <div class="topnav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Our Products</a></li>
+        <li><a href="#">About Us</a></li>
+      <div class="search">
+        <input type="text" name="search" id="search" placeholder="search products">
+    </div></ul></nav></header>
+      <style>
+      .search{
+        float: right;
+        color: #000;
+        padding: 12px 10px;
+      }
+      .logo a{
+        font-size: 50px;
+      }
+      .topnav input{  
+        border: 2px solid brown;
+        border-radius: 10px;
+        padding: 3px 8px;  
+                   }  
+      .topnav ul{
+        list-style-type: none; 
+                }
+        li {  
+         float: left;  
+           }
+  
+        li a {  
+          font-size:20px;  
+          text-align: center;  
+          padding: 10px 20px;  
+          text-decoration: none;  
+             }  
+        li a:hover {  
+          background-color: rgb(61, 45, 206);  
+          color: white;  
+                   }  
+        
+</style>
+ 
+                
+<pre>
+  <h1>The Beauty of MakeUp</h1></pre>   
+<img src="C:\Users\User\Desktop\m6.webp" alt="" width="50%" height="300">
+<p>Elegance is the only beauty that never fades</p>
+<img src="C:\Users\User\Desktop\m7.jpg" alt="" width="30%" height="200">
+<img src="C:\Users\User\Desktop\m2.jpeg" width="30%" height="200">
+<img src="C:\Users\User\Desktop\m6.jpeg"alt="" width="30%" height="200">
+<img src="C:\Users\User\Desktop\m3.jpg" width="30%" height="200">
+<img src="C:\Users\User\Desktop\m9.jpg" width="30%" height="200">
+<img src="C:\Users\User\Desktop\30.jpg" width="30%" height="200">
+                      
+                      <table>
+                        <tr>
+                        <th>Product</th>
+                        <th>Prize</th>
+                        <th>Garantee</th>
+                        </tr>
+                        <tr>
+                            <th>liner</th>
+                            <th>200</th>
+                            <th>99%</th>
+                        </tr>
+                        <tr>
+                             <th>Maskara</th>
+                             <th>150</th>
+                             <th>100%</th>
+                        </tr>
+                        <tr>
+                             <th>Foundation</th>
+                             <th>400</th>
+                             <th>100%</th>
+                        </tr>
+                        <tr>
+                              <th>FaceWash</th>
+                              <th>350</th>
+                              <th>100%</th>
+                        </tr>
+                      </table>
+<section class="footer">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"><i class=""></i>ask question</a>
+                <a href="#"><i class=""></i>about us</a>
+                <a href="#"><i class=""></i>privacy policy</a>
+                <a href="#"><i class=""></i>terms of use</a>
+                </div>
+            <div class="box">
+                <h3>Contact US</h3>
+                <a href="#"><i class=""></i>6005249805</a>
+                <h3> smile is the best makeup any girl can wear</h3>
+        </section>  
+        <style>
+          table,th{
+            border: 1px solid red;
+            color: aliceblue;
+                  }
+             
+            h1{
+              color: aliceblue;
+            }
+            p{
+              color: white;
+            }
+            .footer {
+              width: 100%;
+              background-color: red;
+              color: white;
+              text-align: center;
+            }
+            
+            </style>
+            </div>
+</body>
